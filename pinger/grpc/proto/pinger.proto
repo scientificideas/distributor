@@ -1,0 +1,14 @@
+/*
+Copyright Scientific Ideas 2022. All Rights Reserved.
+SPDX-License-Identifier: Apache-2.0
+*/
+
+syntax = "proto3";
+package proto;
+import "google/protobuf/empty.proto";
+option go_package = ".;pinger";
+
+service GRPCPinger {
+    // check service liveness
+    rpc Ping (google.protobuf.Empty) returns (google.protobuf.Empty);
+}
